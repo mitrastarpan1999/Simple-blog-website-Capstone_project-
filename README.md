@@ -16,38 +16,27 @@ A **Simple Blog Website** that allows users to create, edit, manage, and share b
 - [License](#license)
 ---
 
-## 📖 About the Project
-The **Simple Blog Website** is a full-stack application that allows users to:
-- Create and publish blogs.
-- Edit and manage existing blogs.
-- View and share blogs with others.
+📖 About the Project
+The Simple Blog Website is a lightweight application that allows users to:
+Create and publish blogs.
+Edit and manage existing blogs.
+View and share blogs with others.
+The website features a clean, responsive design powered by Bootstrap 5 and custom CSS. It uses Node.js and Express.js as the backend, with EJS for dynamic templating. No database is involved in this project — blog posts are stored temporarily during runtime.
 
-The website features a beautiful and responsive design powered by **Bootstrap 5** and custom CSS. It uses **Node.js** and **Express.js** as the backend with **MongoDB** as the database to store blog posts.
+🛠️ Built With
+⚡️ Frontend
+HTML5, CSS3
 
----
+Bootstrap 5
 
-## 🎯 Features
-✅ Create, Edit, and Delete Blogs  
-✅ View and Manage Published Blogs  
-✅ Responsive and Modern UI  
-✅ Dynamic Blog Listing  
-✅ Secure and Optimized Backend  
-✅ Error Handling and Form Validations  
-✅ Smooth Color Transition Header Animation  
+JavaScript (Client-side Validation)
 
----
+🖥️ Backend
+Node.js (JavaScript Runtime)
 
-## 🛠️ Built With
-### ⚡️ Frontend
-- HTML5, CSS3
-- Bootstrap 5
-- JavaScript (Client-side Validation)
+Express.js (Web Framework)
 
-### 🖥️ Backend
-- Node.js (JavaScript Runtime)
-- Express.js (Web Framework)
-- MongoDB (NoSQL Database)
-- EJS (Embedded JavaScript for Templating)
+EJS (Embedded JavaScript for Templating)
 
 ### 🎨 Styling and Animations
 - CSS Custom Styles
