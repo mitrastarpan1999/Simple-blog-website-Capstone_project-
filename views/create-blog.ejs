@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<section class="create-blog container my-5">
+  <div class="card p-5 shadow-lg bg-light">
+    <h2 class="text-center mb-4">Create Your Blog</h2>
+    <form action="/submit" method="POST" class="form-group">
+      <label for="title" class="form-label">Post Title</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="form-control mb-3"
+        placeholder="Post Title"
+        required
+      />
+
+      <label for="content" class="form-label">Write your post...</label>
+      <textarea
+        id="content"
+        name="content"
+        class="form-control content-box mb-3"
+        rows="10"
+        placeholder="Write your post..."
+        required
+      ></textarea>
+
+      <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/footer.ejs") %>

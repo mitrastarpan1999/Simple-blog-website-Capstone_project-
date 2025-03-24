@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="text-center my-4">All Blog Posts</h1>
+<div class="container">
+    <% if (posts.length > 0) { %>
+        <% for (let i = 0; i < posts.length; i++) { %>
+            <div id="blog-<%= i %>" class="container my-4">
+                <div class="blog-post">
+                    <h2><%= posts[i].title %></h2>
+                    <p><%= posts[i].content %></p>
+                    <small>Posted on: <%= posts[i].date %></small>
+
+                    <form action="/edit-blog/<%= i %>" method="GET" style="display: inline;">
+                        <button type="submit" class="btn btn-sm btn-warning">Edit</button>
+                    </form>
+
+                    <form action="/delete-blog/<%= i %>" method="POST" style="display: inline;">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
+                    <hr>
+                </div>
+            </div>
+        <% } %>
+    <% } else { %>
+        <p class="text-center">No blog posts yet. Create your first post!</p>
+    <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

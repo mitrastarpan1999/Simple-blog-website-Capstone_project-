@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<div class="edit-blog">
+    <div class="card">
+        <h2>Edit Your Blog</h2>
+        
+        <form action="/update-blog/<%= blogId %>" method="POST" class="form-group">
+            <label for="title">Post Title</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                value="<%= blog.title %>"
+                required
+                class="form-control"
+            />
+            
+            <label for="content">Write your post...</label>
+            <textarea
+                id="content"
+                name="content"
+                class="content-box"
+                required
+            ><%= blog.content %></textarea>
+            
+          
+            <button type="submit">Update Post</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

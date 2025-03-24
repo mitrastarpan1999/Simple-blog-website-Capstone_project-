@@ -1,0 +1,91 @@
+<%- include("partials/header.ejs") %>
+
+<section class="hero bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Welcome to Simple Blog Website</h1>
+    
+    
+  </div>
+  <div>
+    <p class="lead">Create, edit, and manage your blogs seamlessly.</p>
+    <a href="/create-blog" class="btn btn-primary btn-lg">Create Your First Blog</a>
+  </div>
+</section>
+
+<section class="features bg-white py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <i class="bi bi-pencil-square text-primary" style="font-size: 3rem;"></i>
+        <h3 class="mt-3">Easy Blog Creation</h3>
+        <p>Create a blog in just a few clicks with a rich text editor.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-card-list text-success" style="font-size: 3rem;"></i>
+        <h3 class="mt-3">Edit & Manage</h3>
+        <p>Edit existing blogs with ease and keep them up to date.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-eye text-danger" style="font-size: 3rem;"></i>
+        <h3 class="mt-3">View & Share</h3>
+        <p>Share your stories with the world instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works bg-light py-5">
+  <h2 style="text-align: center; font-weight: bolder;">How it works</h2>
+  <div class="container text-center">
+    
+    
+    <div class="row justify-content-center">
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="step">
+          <i class="bi bi-pencil-fill text-primary" style="font-size: 3rem;"></i>
+          <h4 class="mt-3">Step 1: Create</h4>
+          <p>Write engaging blogs effortlessly.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="step">
+          <i class="bi bi-gear-fill text-success" style="font-size: 3rem;"></i>
+          <h4 class="mt-3">Step 2: Edit</h4>
+          <p>Update and modify your content easily.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="step">
+          <i class="bi bi-upload text-danger" style="font-size: 3rem;"></i>
+          <h4 class="mt-3">Step 3: Publish</h4>
+          <p>Share your blog with the world.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="latest-blogs bg-white py-5">
+  <h2 class="text-center fw-bold mb-4" >Latest Blogs</h2>
+  <div class="container">
+    
+    <div class="list-group">
+      <% if (posts.length > 0) { %>
+        <% for (let i = 0; i < Math.min(3, posts.length); i++) { %>
+          <a href="/blogs" class="list-group-item list-group-item-action">
+            <h5><%= posts[i].title %></h5>
+            <p class="text-muted"><%= posts[i].date %></p>
+          </a>
+        <% } %>
+        <div class="text-center mt-3">
+          <a href="/blogs" class="btn btn-outline-primary">View All Blogs</a>
+        </div>
+      <% } else { %>
+        <p class="text-center">No blogs available. <a href="/create-blog">Create one now!</a></p>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
